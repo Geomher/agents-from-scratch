@@ -57,6 +57,8 @@ uv sync --extra dev
 
 # Activate the virtual environment
 source .venv/bin/activate
+# OR
+.venv\Scripts\Activate
 ```
 
 **Alternative: Using pip**
