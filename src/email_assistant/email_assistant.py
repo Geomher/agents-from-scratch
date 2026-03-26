@@ -18,7 +18,10 @@ tools = get_tools()
 tools_by_name = get_tools_by_name(tools)
 
 # Initialize the LLM for use with router / structured output
-llm = init_chat_model("openai:gpt-4.1", temperature=0.0)
+openai_model = "openai:gpt-4.1"
+ollama_model = "ollama:qwen2:7b"
+llm = init_chat_model(ollama_model, temperature=0.0)
+# llm = init_chat_model("openai:gpt-4.1", temperature=0.0)
 llm_router = llm.with_structured_output(RouterSchema) 
 
 # Initialize the LLM, enforcing tool use (of any available tools) for agent
